@@ -1,0 +1,31 @@
+{
+  "personas": [
+    {
+      "platform": "coinbase",
+      "action": "learn_and_earn",
+      "est_value": 30
+    },
+    {
+      "platform": "swagbucks",
+      "action": "surveys_videos",
+      "est_per_hr": 8
+    },
+    {
+      "platform": "mturk",
+      "action": "hit_batches",
+      "est_per_hr": 10
+    },
+    {
+      "platform": "rev",
+      "action": "transcription",
+      "est_per_hr": 15
+    },
+    {
+      "platform": "respondent",
+      "action": "study_matching",
+      "est_per_study": 75
+    }
+  ],
+  "coordination": "parallel_execution",
+  "wallet_consolidation": "single_btc_address"
+}

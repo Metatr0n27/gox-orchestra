@@ -1,0 +1,73 @@
+{
+  "target": 500.0,
+  "deadline_hours": 5,
+  "streams": [
+    {
+      "stream": "GRANT_APPLICATIONS",
+      "rate_range": "$0-$5000/hr",
+      "potential": "$7261.07",
+      "difficulty": "long-game",
+      "actions": [
+        "HelloAlice.com: Small business grants (rolling applications)",
+        "IFundWomen: Campaign + matching funds opportunity",
+        "Kickstarter Creator Fund: Project funding"
+      ]
+    },
+    {
+      "stream": "QUICK_FLIPS",
+      "rate_range": "$30-$150/hr",
+      "potential": "$150.78",
+      "difficulty": "variable",
+      "actions": [
+        "List unused items on Facebook Marketplace (instant local cash)",
+        "Scan thrift stores with eBay sold listings app",
+        "Return recent purchases for cash refund"
+      ]
+    },
+    {
+      "stream": "TESTING_GIGS",
+      "rate_range": "$25-$100/hr",
+      "potential": "$280.01",
+      "difficulty": "medium",
+      "actions": [
+        "UsabilityTesting.com: $10 per 20-min test (apply immediately)",
+        "UserInterviews.com: $50-150 per study (screen fast)",
+        "Respondent.io: Professional studies paying $100+/hour"
+      ]
+    },
+    {
+      "stream": "CRYPTO_ARBITRAGE",
+      "rate_range": "$15-$85/hr",
+      "potential": "$134.75",
+      "difficulty": "medium",
+      "actions": [
+        "Sign up: Coinbase, Kraken, Binance (referral bonuses)",
+        "Transfer between exchanges exploiting spread differences",
+        "Stake idle assets for yield (5-15% APY instant activation)"
+      ]
+    },
+    {
+      "stream": "DIGITAL_SERVICES",
+      "rate_range": "$10-$45/hr",
+      "potential": "$91.36",
+      "difficulty": "skill-dependent",
+      "actions": [
+        "Post gigs on Fiverr: resume reviews, proofreading ($15-50)",
+        "Offer services on TaskRabbit: assembly, moving help",
+        "Rev.com transcription: $0.30-1.10/min flexible timing"
+      ]
+    },
+    {
+      "stream": "MICROTASKS",
+      "rate_range": "$5-$18/hr",
+      "potential": "$20.97",
+      "difficulty": "easy",
+      "actions": [
+        "Register: Swagbucks, InboxDollars, PrizeRebel ($5 signup bonus each)",
+        "Complete surveys targeting $5-15/hour average",
+        "Watch video playlists (passive ~$2/hour)"
+      ]
+    }
+  ],
+  "spawned": "2026-05-24T01:40:46.382149"
+}
