@@ -1,0 +1,11 @@
+{
+  "id": "notification_setup",
+  "desc": "Alert infrastructure",
+  "command": "pip install pushbullet pyTelegramBotAPI --quiet",
+  "added": "2026-05-24T00:34:04.914463",
+  "priority": 5,
+  "attempts": 1,
+  "max_attempts": 3,
+  "status": "failed",
+  "error": "ERROR: Could not find a version that satisfies the requirement pushbullet (from versions: none)\nERROR: No matching distribution found for pushbullet\n"
+}
