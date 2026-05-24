@@ -222,3 +222,6 @@
  7 files changed, 220 insertions(+), 51 deletions(-)
  create mode 100644 spark_web_demo/index.html
  create mode 100644 spark_web_demo/manifest.json
+[main 7e09461] Auto-sync [08:28]
+ 6 files changed, 67 insertions(+), 51 deletions(-)
+ create mode 100644 spark_nav_beta.tar.gz
