@@ -1,0 +1,34 @@
+[
+  {
+    "name": "kast_promo",
+    "potential_usd": 415,
+    "harvested": "14:16:05",
+    "outcome": {
+      "success": true,
+      "links": [],
+      "screenshot": "/home/metatron/HERMES/screenshots/kast_promo_141605.png"
+    }
+  },
+  {
+    "name": "onepay_promo",
+    "potential_usd": 150,
+    "harvested": "14:16:10",
+    "outcome": {
+      "success": true,
+      "links": [],
+      "screenshot": "/home/metatron/HERMES/screenshots/onepay_promo_141610.png"
+    }
+  },
+  {
+    "name": "kraken_promo",
+    "potential_usd": 350,
+    "harvested": "14:16:14",
+    "outcome": {
+      "success": true,
+      "links": [
+        "https://www.sofi.com/referral-program/"
+      ],
+      "screenshot": "/home/metatron/HERMES/screenshots/kraken_promo_141614.png"
+    }
+  }
+]

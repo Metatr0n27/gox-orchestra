@@ -1,0 +1,46 @@
+AGENTS:
+  
+  - id: builder_agent
+    role: Lead Developer
+    responsibilities:
+      - Writes production code
+      - Fixes bugs reported by repair agent
+      - Optimizes performance
+    tools: ["github", "docker", "testing_framework"]
+      
+  - id: qa_repair_agent  
+    role: Quality Assurance + Auto-Fixer
+    responsibilities:
+      - Tests all deployments
+      - Diagnoses failures
+      - Applies patches automatically
+    escalation_threshold: 3
+      
+  - id: marketer_agent
+    role: Growth Engineer
+    responsibilities:
+      - Posts demos to social platforms
+      - Manages waitlist communications
+      - A/B tests landing pages
+    channels: ["twitter", "reddit", "discord"]
+      
+  - id: sales_agent
+    role: Deal Closer
+    responsibilities:
+      - Outreach to potential buyers
+      - Negotiates licensing terms
+      - Handles payment logistics
+    target_segments: ["agencies", "traders", "founders"]
+      
+  - id: ops_overseer
+    role: Operations Manager
+    responsibilities:
+      - Sends notifications to owner
+      - Presents decision options
+      - Coordinates between all agents
+    alert_methods: ["email", "pushbullet", "telegram"]
+
+COMMUNICATION_PROTOCOL:
+  daily_sync: "09:00 UTC"
+  blocker_alert_immediate: true
+  weekly_metrics_report: "Friday 18:00 UTC"

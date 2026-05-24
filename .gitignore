@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.env
+*.log
+venv/
+node_modules/
+.DS_Store
+failed/*.json
+done/*.json
+queue/tasks.json
