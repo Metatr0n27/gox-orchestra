@@ -1,0 +1,4 @@
+  File "/home/metatron/HERMES/agents/self_healer.py", line 5
+    dirs=[\"~/HERMES/logs\",\"~/HERMES/done\",\"~/HERMES/queue\",\"~/HERMES/swarm_monetizer/earnings\"]
+           ^
+SyntaxError: unexpected character after line continuation character

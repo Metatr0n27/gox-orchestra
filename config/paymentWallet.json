@@ -1,13 +1,1 @@
-{
-  "consolidation_strategy": "single_endpoint",
-  "preferred_settlement": "strike_or_cashapp",
-  "chain_flexibility": {
-    "accept_btc": true,
-    "accept_lightning": true,
-    "convert_immediately_to_usdc": true
-  },
-  "withdrawal_triggers": {
-    "threshold_usd": 100,
-    "schedule": "weekly_automatic"
-  }
-}
+{"strategy":"single_endpoint","prefer_strike":true,"auto_convert_threshold":100}
