@@ -1,0 +1,107 @@
+{
+  "product": "Spark Navigator",
+  "tagline": "GPS Precision for Spark Delivery Heroes",
+  "marketing_team": {
+    "agent_1_lead_gen": {
+      "name": "ProspectMiner",
+      "mission": "Identify frustrated gig workers actively seeking efficiency tools",
+      "channels": ["reddit_r_doordash_drivers", "uber_people_forum", "facebook_spark_groups"],
+      "daily_tasks": [
+        "Scan forums for complaints about apartment navigation",
+        "Build prospect list with pain-point indicators",
+        "Flag posts mentioning lost time searching addresses"
+      ],
+      "output_format": {
+        "prospects_found_daily": 50,
+        "engagement_messages_sent": 20,
+        "conversion_target_percent": 5
+      },
+      "scripts": {
+        "forum_response": "Hey fellow driver 👋 Saw your post about apartment hunting struggles. Built a tool specifically for this - DM if interested in early access."
+      }
+    },
+    
+    "agent_2_content_creator": {
+      "name": "StoryForge",
+      "mission": "Produce viral-ready TikTok/Shorts demonstrating painful-before/easy-after scenarios",
+      "deliverables": {
+        "tiktok_scripts_weekly": 5,
+        "youtube_shorts_monthly": 12,
+        "instagram_reels": 8
+      },
+      "video_hooks": [
+        "\"POV: You spent 15 mins finding Apt 204B\"",
+        "\"Green means GO, Blue means BIG $$\" (heatmap demo)",
+        "\"Driver shows me her worst complex - I fix it in 30 sec\""
+      ],
+      "filming_notes": "Real footage beats stock. Capture actual frustration moments. Show the app solving it live."
+    },
+    
+    "agent_3_community_builder": {
+      "name": "TribeKeeper",
+      "mission": "Grow Discord server and Telegram channels with engaged driver community",
+      "kpis": {
+        "discord_members_month_1": 500,
+        "active_contributors_ratio": 0.15,
+        "beta_feedback_responses": 50
+      },
+      "automated_posts": {
+        "monday_motivation": "Weekend haul screenshots thread!",
+        "wednesday_wins": "Post your fastest delivery thanks to SparkNav",
+        "friday_features": "Feature Friday - vote on next improvement"
+      },
+      "reward_system": "Free premium month for top contributors"
+    },
+    
+    "agent_4_influencer_outreach": {
+      "name": "ConnectorPrime",
+      "mission": "Partner with YouTube creators in gig economy niche",
+      "target_creators": [
+        {"channel": "Your Driver Mike", "subs": 85000, "contact_priority": "high"},
+        {"channel": "Dash Hard", "subs": 120000, "contact_priority": "critical"},
+        {"channel": "Gig Economy Expert", "subs": 45000, "contact_priority": "medium"}
+      ],
+      "partnership_offers": {
+        "affiliate_split": "30%",
+        "exclusive_code": "CREATORNAME30",
+        "free_lifetime_premium": true
+      },
+      "outreach_template": "Subject: Tool your audience actually needs\n\nHi [Name], \n\nLongtime viewer here. I built something that solves the #1 complaint I see in comments - apartment navigation hell.\n\nWould love to discuss partnership. Offering 30% revshare plus lifetime premium for you.\n\nCheck it out: [link]"
+    },
+    
+    "agent_5_retention_specialist": {
+      "name": "ValueLock",
+      "mission": "Prevent churn through personalized engagement campaigns",
+      "triggers": {
+        "inactive_3_days": "Push notification with nearby hotspot alert",
+        "low_usage_pattern": "Email highlighting unused features",
+        "subscription_cancel_initiated": "Exit survey + retention offer popup"
+      },
+      "retention_stats_tracking": {
+        "weekly_active_users": true,
+        "feature_adoption_rates": true,
+        "session_length_avg": true,
+        "crashes_errors_logged": true
+      },
+      "win_back_campaign": "Come back for 50% off next month - we fixed [specific_complaint]"
+    }
+  },
+  
+  "coordinated_launch_sequence": {
+    "week_minus_2": [
+      "Agent 1 seeds initial interest posts",
+      "Agent 3 launches Discord server",
+      "Agent 4 begins influencer outreach"
+    ],
+    "launch_day": [
+      "Agent 2 publishes hero video across platforms",
+      "Agent 1 engages all forum mentions",
+      "Agent 3 announces official launch party event"
+    ],
+    "post_launch": [
+      "Daily standups aggregated to weekly report",
+      "Cross-promote winners across channels",
+      "Iterate messaging based on conversion data"
+    ]
+  }
+}

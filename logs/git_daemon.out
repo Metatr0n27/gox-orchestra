@@ -195,3 +195,7 @@
  5 files changed, 64 insertions(+), 51 deletions(-)
 [main 530491b] Auto-sync [07:33]
  5 files changed, 64 insertions(+), 51 deletions(-)
+[main 379b82f] Auto-sync [07:38]
+ 9 files changed, 258 insertions(+), 138 deletions(-)
+ create mode 100644 spark_navigator/lib/screens/home_screen.dart
+ create mode 100644 spark_navigator/lib/widgets/order_heatmap_widget.dart
