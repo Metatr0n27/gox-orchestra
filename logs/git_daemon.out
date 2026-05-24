@@ -37,3 +37,10 @@
  5 files changed, 73 insertions(+), 60 deletions(-)
 [main 7ad449f] Auto-sync [01:36]
  5 files changed, 64 insertions(+), 51 deletions(-)
+[main b1c2e4f] Auto-sync [01:41]
+ 10 files changed, 465 insertions(+), 51 deletions(-)
+ create mode 100755 swarm_monetizer/audioNotify.py
+ create mode 100644 swarm_monetizer/earnings/log.json
+ create mode 100755 swarm_monetizer/instantCashSwarm.py
+ create mode 100644 swarm_monetizer/manifest.json
+ create mode 100644 swarm_monetizer/payloads/swarm_config.json
