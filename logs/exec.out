@@ -11,3 +11,5 @@
 [EXEC][00:34:07] FAIL [demo_script] - sent to repair
 [EXEC][00:34:07] Running [pricing_tiers]: echo '{starter:19,pro:49,business:149}' > configs/
 [EXEC][00:34:07] FAIL [pricing_tiers] - sent to repair
+[EXEC][00:35:59] Running [queues]: queues
+[EXEC][00:35:59] FAIL [queues] - sent to repair

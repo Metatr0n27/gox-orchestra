@@ -5,3 +5,10 @@
  4 files changed, 55 insertions(+), 51 deletions(-)
 [main c3b316a] Auto-sync [00:30]
  4 files changed, 54 insertions(+), 51 deletions(-)
+[main 44d1082] Auto-sync [00:35]
+ 12 files changed, 124 insertions(+), 66 deletions(-)
+ create mode 100644 data/raw_clutch.html
+ create mode 100644 fixed/demo_script.json
+ create mode 100644 fixed/notification_setup.json
+ create mode 100644 fixed/pricing_tiers.json
+ create mode 100644 www/index.html

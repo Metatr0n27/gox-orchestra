@@ -1,0 +1,11 @@
+{
+  "id": "queues",
+  "desc": "queues",
+  "command": "queues",
+  "added": "2026-05-24T00:35:58.453368",
+  "priority": 5,
+  "attempts": 1,
+  "max_attempts": 3,
+  "status": "failed",
+  "error": "/bin/sh: 1: queues: not found\n"
+}
