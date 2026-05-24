@@ -258,3 +258,5 @@
 {"last_run": "2026-05-24 11:50", "total_opportunities": 0, "top_priority": "none"}
 {"last_run": "2026-05-24 16:20", "total_opportunities": 54, "top_priority": "[OFFER] OnePay: $50 from them + $100 from me (US Only)"}
 {"last_run": "2026-05-24 16:20", "total_opportunities": 54, "top_priority": "[OFFER] OnePay: $50 from them + $100 from me (US Only)"}
+{"last_run": "2026-05-24 16:30", "total_opportunities": 54, "top_priority": "[OFFER] OnePay: $50 from them + $100 from me (US Only)"}
+{"last_run": "2026-05-24 16:30", "total_opportunities": 54, "top_priority": "[OFFER] OnePay: $50 from them + $100 from me (US Only)"}
