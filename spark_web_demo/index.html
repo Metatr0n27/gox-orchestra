@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Spark Navigator Beta</title>
+<link rel="manifest" href="manifest.json">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,sans-serif}
+body{background:#f5f5f5;min-height:100vh;padding-bottom:80px;-webkit-tap-highlight-color:transparent}
+.header{position:sticky;top:0;background:#00aa55;color:white;padding:16px;display:flex;justify-content:space-between;align-items:center;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.logo{font-size:20px;font-weight:700}.earnings{font-weight:600;font-size:18px}
+.section{padding:16px}.label{text-transform:uppercase;font-size:11px;color:#666;margin-bottom:8px;font-weight:600}
+.order-card{background:linear-gradient(135deg,#e8f5e9,#43a047);border-radius:12px;padding:16px;margin-bottom:12px;color:#fff;cursor:pointer;transition:transform .15s,box-shadow .15s;box-shadow:0 4px 12px rgba(67,160,71,.3)}
+.order-card.blue-zone{background:linear-gradient(135deg,#e3f2fd,#1565c0);box-shadow:0 4px 12px rgba(21,101,192,.3)}
+.order-card:active{transform:scale(.98)}.card-top{display:flex;justify-content:space-between;align-items:flex-start}
+.zone-badge{background:rgba(255,255,255,.25);padding:4px 10px;border-radius:20px;font-size:10px;font-weight:700;text-transform:uppercase}
+.card-main{display:flex;gap:16px;align-items:center;margin-top:12px}
+.count-circle{width:56px;height:56px;background:rgba(255,255,255,.2);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.count-num{font-size:22px;font-weight:800;line-height:1}.count-label{font-size:9px;opacity:.8}
+.card-details{flex:1}.card-title{font-size:18px;font-weight:700}.progress-bar{height:6px;background:rgba(255,255,255,.3);border-radius:3px;margin-top:8px;overflow:hidden}
+.progress-fill{height:100%;background:#fff;border-radius:3px;transition:width .3s}
+.btn-row{display:flex;gap:12px;margin-top:16px}
+.btn{flex:1;padding:14px;border:none;border-radius:10px;font-size:15px;font-weight:600;cursor:pointer;transition:all .15s}
+.btn-primary{background:#00aa55;color:#fff}.btn-secondary{background:#eee;color:#333}
+.btn-primary:hover{background:#00954a}.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:200;display:none;align-items:flex-end}
+.modal-panel{background:#fff;width:100%;border-radius:20px 20px 0 0;padding:24px;animation:slideUp .25s ease}@keyframes slideUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
+.modal-title{font-size:18px;font-weight:700;margin-bottom:16px}
+.input-group{margin-bottom:16px}.input-group label{display:block;font-size:12px;color:#666;margin-bottom:6px}
+.input-group input{width:100%;padding:12px;border:2px solid #ddd;border-radius:8px;font-size:16px}
+.nav-bar{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #eee;display:flex;justify-content:around;padding:10px 0;z-index:100}
+.nav-btn{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;color:#999;font-size:11px;cursor:pointer;border:none;background:none}
+.nav-btn.active{color:#00aa55}.nav-icon{font-size:22px}
+.sound-toggle{position:absolute;top:16px;right:60px;background:none;border:none;color:white;font-size:20px;cursor:pointer}
+.toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%);background:#333;color:#fff;padding:12px 24px;border-radius:8px;font-size:14px;z-index:300;opacity:0;transition:opacity .3s}
+.toast.show{opacity:1}
+</style>
+</head>
+<body>
+<div class="header">
+<span class="logo">SparkNav</span>
+<button class="sound-toggle" id="soundToggle" title="Toggle sound">&#128266;</button>
+<span class="earnings" id="totalDisplay">$0.00</span>
+</div>
+
+<div class="section">
+<div class="label">Active Deliveries</div>
+<div id="orderList"></div>
+<div class="btn-row">
+<button class="btn btn-primary" id="addBtn">Add Order</button>
+<button class="btn btn-secondary" id="clearBtn">Clear Done</button>
+</div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<nav class="nav-bar">
+<button class="nav-btn active"><span class="nav-icon">&#128205;</span>Map</button>
+<button class="nav-btn" id="scanBtn"><span class="nav-icon">&#128247;</span>Scan</button>
+<button class="nav-btn" id="statsBtn"><span class="nav-icon">&#128200;</span>Stats</button>
+</nav>
+
+<div class="modal-overlay" id="addModal">
+<div class="modal-panel">
+<h3 class="modal-title">New Order</h3>
+<div class="input-group">
+<label>How many items?</label>
+<input type="number" id="itemInput" placeholder="1-100" min="1" max="100" value="1">
+</div>
+<div class="input-group">
+<label>Estimated tip ($)</label>
+<input type="number" id="tipInput" placeholder="0.00" step="0.50" value="5.00">
+</div>
+<div class="btn-row">
+<button class="btn btn-primary" id="confirmAdd">Confirm</button>
+<button class="btn btn-secondary" id="cancelAdd">Cancel</button>
+</div>
+</div>
+</div>
+
+<audio id="kaChing" preload="auto">
+<source src="data:audio/mp3;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU4Ljc2LjEwMAAAAAAAAAAAAAAA/+M4wAAAAAAAAAAAAEluZm8AAAAPAAAAAwAAAbAAqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV////////////////////////////////////////////AAAAAExhdmM1OC4xMwAAAAAAAAAAAAAAACQDgAAAAAAAAAGw9wrNaQAAAAAAAAAAAAAAAAD/4xjEAAJ0AWIAAAEUABgZPAAAYmJpaWJiYmJiYmL//////////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/4xjEFgJ0AX4BgBFQAUHBwcHBwcHD///////////////////////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//" src="data:audio/wav;base64,UklGRl9vT19teleQAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YTtvT18=">
+</audio>
+
+<script>
+const STORAGE_KEY='sparkNavOrders';const SOUND_KEY='sparkNavSound';
+let orders=JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]');let soundOn=localStorage.getItem(SOUND_KEY)!=='false';
+
+function save(){localStorage.setItem(STORAGE_KEY,JSON.stringify(orders))}
+function getTotal(){return orders.filter(o=>o.done).reduce((s,o)=>s+o.pay+s.tip,0)}
+
+function getColor(items){
+if(items<=50){const r=(232-(232-27)*(items-1)/49)|0,g=(245-(245-94)*(items-1)/49)|0,b=(233-(233-32)*(items-1)/49)|0;return`rgb(${r},${g},${b})`}
+const n=Math.min(items,100)-51;const r=(227-(227-13)*n/49)|0,g=(242-(242-71)*n/49)|0,b=(253-(253-161)*n/49)|0;return`rgb(${r},${g},${b})`
+}
+
+function play(){
+if(!soundOn)return;
+try{const c=new(window.AudioContext||window.webkitAudioContext)();const o=c.createOscillator();const g=c.createGain();o.connect(g);g.connect(c.destination);o.frequency.value=880;o.type='sine';g.gain.setValueAtTime(.3,c.currentTime);g.gain.exponentialRampToValueAtTime(.01,c.currentTime+.15);o.start();o.stop(c.currentTime+.15)}catch(e){}
+}
+
+function toast(msg){
+const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)
+}
+
+function render(){
+const list=document.getElementById('orderList');list.innerHTML='';
+orders.slice().reverse().forEach((o,i)=>{
+const card=document.createElement('div');card.className=`order-card${o.items>50?' blue-zone':''}`;card.style.background=getColor(o.items);
+card.innerHTML=`
+<div class="card-top"><span class="zone-badge">${o.items<=50?'Green':'Blue'} Zone</span>${o.done?'&#9989;':''}</div>
+<div class="card-main">
+<div class="count-circle"><span class="count-num">${o.items}</span><span class="count-label">items</span></div>
+<div class="card-details">
+<div class="card-title">${o.done?'Delivered':'Pending'}</div>
+<div class="progress-bar"><div class="progress-fill" style="width:${Math.min(o.items,100)}%"></div></div>
+</div>
+</div>`;
+card.onclick()=>toggleDone(orders.length-1-i);
+list.appendChild(card)
+});
+document.getElementById('totalDisplay').textContent='$'+getTotal().toFixed(2)
+}
+
+function addOrder(items,tip){
+orders.push({items:+items,tip:+tip,pay:7,id:Date.now()});
+save();render();play();toast(`Added ${items}-item order`)
+}
+
+function toggleDone(i){
+orders[i].done=!orders[i].done;
+save();render();play();
+if(orders[i].done)toast(`+$${(orders[i].pay+orders[i].tip).toFixed(2)} earned!`)
+}
+
+function clearDone(){orders=orders.filter(o=>!o.done);save();render()}
+
+document.getElementById('addBtn').onclick=()=>document.getElementById('addModal').style.display='flex';
+document.getElementById('cancelAdd').onclick=()=>document.getElementById('addModal').style.display='none';
+document.getElementById('confirmAdd').onclick()=>{
+const items=document.getElementById('itemInput').value||1;
+const tip=document.getElementById('tipInput').value||5;
+addOrder(items,tip);
+document.getElementById('addModal').style.display='none'
+};
+document.getElementById('clearBtn').onclick=clearDone;
+document.getElementById('soundToggle').onclick=function(){soundOn=!soundOn;localStorage.setItem(SOUND_KEY,soundOn);this.textContent=soundOn?'🔊':'🔇'};
+document.getElementById('scanBtn').onclick=()=>toast('Scanner coming soon!');
+document.getElementById('statsBtn').onclick=()=>toast(`${orders.length} total | $${getTotal().toFixed(2)} earned`);
+
+render();
+if(!soundOn)document.getElementById('soundToggle').textContent='🔇';
+</script>
+</body>
+</html>
