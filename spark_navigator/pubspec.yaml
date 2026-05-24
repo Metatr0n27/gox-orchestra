@@ -1,6 +1,5 @@
 name: spark_navigator
-description: GPS navigator for Spark delivery drivers with ML-powered route optimization
-publish_to: 'none'
+description: Smart companion for Spark delivery drivers
 version: 1.0.0+1
 
 environment:
@@ -9,56 +8,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  
-  # Maps & GPS
-  google_maps_flutter: ^1^.5.0
-  geolocator: ^2^.1.0
-  flutter_polyline_points: ^1^.0.0
-  
-  # Camera & OCR
-  camera: .10.5+7
-  google_mlkit_text_recognition: .11.0
-  
-  # Storage
-  hive: ^1^.2.3
-  hive_flutter: ^3^.1.0
-  path_provider: ^1^.1.1
-  
-  # UI Components
-  flutter_colorpicker: ^3^.0.3
-  confetti: .7.0
-  audioplayers: ^4^.2.1
-  
-  # Notifications
-  flutter_local_notifications: ^5^.0.0
-  
-  # HTTP & APIs
-  dio: ^4^.4.0
-  
-  # Machine Learning
-  tflite_flutter: .10.4
-  
-  # Utilities
-  intl: .18.1
-  uuid: ^6^.2.1
-
-flutter_launcher_icons:
-  android: true
-  ios: true
-  image_path: "assets/icon.png"
-
-flutter_native_splash:
-  color: "#00AA55"
-  image: assets/splash.png
+  hive_flutter: ^1^.1.0
+  http: ^2^.1.0
+  cupertino_icons: ^2^.0.6
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  hive_generator: ^1^.0.1
-  build_runner: ^1^.4.7
 
 flutter:
   uses-material-design: true
-  assets:
-    - assets/
-    - assets/models/
