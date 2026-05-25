@@ -737,3 +737,15 @@
  5 files changed, 73 insertions(+), 60 deletions(-)
 [main 08d6d67] Auto-sync [11:49]
  5 files changed, 64 insertions(+), 51 deletions(-)
+[main 94a6698] Auto-sync [11:54]
+ 15 files changed, 366 insertions(+), 51 deletions(-)
+ create mode 100644 active_income/affiliate_grid/pages/finance.html
+ create mode 100644 active_income/affiliate_grid/pages/tools.html
+ create mode 100755 active_income/affiliate_grid/setup.py
+ create mode 100755 active_income/crypto_watch/arbitrage.py
+ create mode 100644 active_income/crypto_watch/spreads.json
+ create mode 100644 active_income/grant_bot/cache.json
+ create mode 100755 active_income/grant_bot/scanner.py
+ create mode 100644 active_income/grant_bot/to_apply.json
+ create mode 100755 active_income/survey_agg/aggregator.py
+ create mode 100644 active_income/survey_agg/opps.json
