@@ -1,15 +1,15 @@
-[EXEC][00:33:50] Executor started
-[EXEC][00:34:06] Running [landing_page]: mkdir -p www && echo '<form><input placeholder=ema
-[EXEC][00:34:06] DONE [landing_page]
-[EXEC][00:34:06] Running [notification_setup]: pip install pushbullet pyTelegramBotAPI --quiet
-[EXEC][00:34:07] FAIL [notification_setup] - sent to repair
-[EXEC][00:34:07] Running [prospect_scraper]: curl -s 'https://clutch.co/agencies' -o data/raw_c
-[EXEC][00:34:07] DONE [prospect_scraper]
-[EXEC][00:34:07] Running [demo_script]: echo '# DEMO OUTLINE:
+[EXEC][11:27:25] Executor started
+[EXEC][11:27:31] Running [landing_page]: mkdir -p www && echo '<form><input placeholder=ema
+[EXEC][11:27:31] DONE [landing_page]
+[EXEC][11:27:31] Running [notification_setup]: pip install pushbullet pyTelegramBotAPI --quiet
+[EXEC][11:27:32] FAIL [notification_setup] - sent to repair
+[EXEC][11:27:32] Running [prospect_scraper]: curl -s 'https://clutch.co/agencies' -o data/raw_c
+[EXEC][11:27:32] DONE [prospect_scraper]
+[EXEC][11:27:32] Running [demo_script]: echo '# DEMO OUTLINE:
 1. Show dashboard
 2. Add tas
-[EXEC][00:34:07] FAIL [demo_script] - sent to repair
-[EXEC][00:34:07] Running [pricing_tiers]: echo '{starter:19,pro:49,business:149}' > configs/
-[EXEC][00:34:07] FAIL [pricing_tiers] - sent to repair
-[EXEC][00:35:59] Running [queues]: queues
-[EXEC][00:35:59] FAIL [queues] - sent to repair
+[EXEC][11:27:32] FAIL [demo_script] - sent to repair
+[EXEC][11:27:32] Running [pricing_tiers]: echo '{starter:19,pro:49,business:149}' > configs/
+[EXEC][11:27:32] FAIL [pricing_tiers] - sent to repair
+[EXEC][11:27:46] Running [queues]: queues
+[EXEC][11:27:46] FAIL [queues] - sent to repair

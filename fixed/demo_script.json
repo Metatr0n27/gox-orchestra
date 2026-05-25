@@ -2,7 +2,7 @@
   "id": "demo_script",
   "desc": "Video outline",
   "command": "echo '# DEMO OUTLINE:\n1. Show dashboard\n2. Add task\n3. Watch completion\n4. Receive notification' > docs/demo_outline.md",
-  "added": "2026-05-24T00:34:04.961689",
+  "added": "2026-05-25T11:27:31.360772",
   "priority": 5,
   "attempts": 1,
   "max_attempts": 3,

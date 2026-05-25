@@ -2,7 +2,7 @@
   "id": "pricing_tiers",
   "desc": "Business model doc",
   "command": "echo '{starter:19,pro:49,business:149}' > configs/pricing.json",
-  "added": "2026-05-24T00:34:04.985026",
+  "added": "2026-05-25T11:27:31.385043",
   "priority": 5,
   "attempts": 1,
   "max_attempts": 3,

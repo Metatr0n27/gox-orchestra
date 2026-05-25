@@ -2,7 +2,7 @@
   "id": "notification_setup",
   "desc": "Alert infrastructure",
   "command": "pip install pushbullet pyTelegramBotAPI --quiet",
-  "added": "2026-05-24T00:34:04.914463",
+  "added": "2026-05-25T11:27:31.314360",
   "priority": 5,
   "attempts": 1,
   "max_attempts": 3,
