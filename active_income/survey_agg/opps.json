@@ -1,0 +1,32 @@
+[
+  {
+    "platform": "usertesting",
+    "url": "https://www.usertesting.com/be-a-user-tester",
+    "rate": "$10/20min",
+    "page_title": "Get Paid to Test | Make Money Online | Side Hustle Ideas"
+  },
+  {
+    "platform": "respondent",
+    "url": "https://www.respondent.io/participants",
+    "rate": "$50-150/study",
+    "page_title": "Get Paid for Research Studies & Paid Surveys | Respondent"
+  },
+  {
+    "platform": "userinterviews",
+    "url": "https://www.userinterviews.com/how-it-works",
+    "rate": "$75/hr avg",
+    "page_title": "User Interviews"
+  },
+  {
+    "platform": "swagbucks",
+    "url": "https://www.swagbucks.com/p/register",
+    "rate": "$5-15/hr",
+    "page_title": "Earn Gift Cards with Online Paid Surveys and Mobile Games | Swagbucks"
+  },
+  {
+    "platform": "mturk",
+    "url": "https://www.mturk.com/worker",
+    "rate": "$8-12/hr",
+    "page_title": "Amazon Mechanical Turk"
+  }
+]

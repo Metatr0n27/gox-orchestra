@@ -1,0 +1,8 @@
+{
+  "buy_exchange": "coinbase",
+  "buy_price": 77507.185,
+  "sell_exchange": "kraken",
+  "sell_price": 77530.1,
+  "spread_percent": 0.03,
+  "timestamp": "2026-05-25T11:53:30.608507"
+}
