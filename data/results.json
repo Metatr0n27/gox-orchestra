@@ -7,7 +7,7 @@
     "amount": 5000.0,
     "keyword_score": 2,
     "priority": 5010.0,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "signupsforpay",
@@ -17,7 +17,7 @@
     "amount": 3000.0,
     "keyword_score": 5,
     "priority": 3025.0,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "signupsforpay",
@@ -27,7 +27,7 @@
     "amount": 3000.0,
     "keyword_score": 5,
     "priority": 3025.0,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "signupsforpay",
@@ -37,7 +37,7 @@
     "amount": 3000.0,
     "keyword_score": 5,
     "priority": 3025.0,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "slavelabour",
@@ -47,7 +47,7 @@
     "amount": 600.0,
     "keyword_score": 3,
     "priority": 615.0,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "slavelabour",
@@ -57,7 +57,7 @@
     "amount": 500.0,
     "keyword_score": 2,
     "priority": 510.0,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "signupsforpay",
@@ -67,17 +67,7 @@
     "amount": 500.0,
     "keyword_score": 2,
     "priority": 510.0,
-    "time": "03:44"
-  },
-  {
-    "source": "flipping",
-    "type": "reddit_post",
-    "title": "Asking prices are not comps",
-    "link": "https://redd.it/1tmvoub",
-    "amount": 499.0,
-    "keyword_score": 2,
-    "priority": 509.0,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "slavelabour",
@@ -87,7 +77,7 @@
     "amount": 300.0,
     "keyword_score": 2,
     "priority": 310.0,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "slavelabour",
@@ -97,7 +87,7 @@
     "amount": 240.0,
     "keyword_score": 3,
     "priority": 255.0,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "signupsforpay",
@@ -107,7 +97,7 @@
     "amount": 200.0,
     "keyword_score": 5,
     "priority": 225.0,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "signupsforpay",
@@ -117,7 +107,7 @@
     "amount": 100.0,
     "keyword_score": 5,
     "priority": 125.0,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "beermoney",
@@ -127,7 +117,7 @@
     "amount": 58.1,
     "keyword_score": 7,
     "priority": 93.1,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "beermoney",
@@ -137,7 +127,7 @@
     "amount": 26.0,
     "keyword_score": 6,
     "priority": 56.0,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "signupsforpay",
@@ -147,17 +137,7 @@
     "amount": 33.0,
     "keyword_score": 4,
     "priority": 53.0,
-    "time": "03:44"
-  },
-  {
-    "source": "flipping",
-    "type": "reddit_post",
-    "title": "anyone ever made money from their hobbies? my k-pop flip accidentally paid for my 1mo graduation tri",
-    "link": "https://redd.it/1tn4m51",
-    "amount": 30.0,
-    "keyword_score": 2,
-    "priority": 40.0,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "slavelabour",
@@ -167,7 +147,7 @@
     "amount": 15.0,
     "keyword_score": 3,
     "priority": 30.0,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "workonline",
@@ -177,7 +157,7 @@
     "amount": 10.0,
     "keyword_score": 4,
     "priority": 30.0,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "slavelabour",
@@ -187,7 +167,7 @@
     "amount": 14.0,
     "keyword_score": 2,
     "priority": 24.0,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "beermoney",
@@ -197,7 +177,7 @@
     "amount": 5.0,
     "keyword_score": 3,
     "priority": 20.0,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "signupsforpay",
@@ -207,7 +187,7 @@
     "amount": null,
     "keyword_score": 4,
     "priority": 20,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "signupsforpay",
@@ -217,7 +197,7 @@
     "amount": null,
     "keyword_score": 4,
     "priority": 20,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "signupsforpay",
@@ -227,7 +207,7 @@
     "amount": null,
     "keyword_score": 4,
     "priority": 20,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "slavelabour",
@@ -237,7 +217,7 @@
     "amount": 6.0,
     "keyword_score": 2,
     "priority": 16.0,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "slavelabour",
@@ -247,7 +227,7 @@
     "amount": null,
     "keyword_score": 3,
     "priority": 15,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "slavelabour",
@@ -257,7 +237,7 @@
     "amount": 5.0,
     "keyword_score": 2,
     "priority": 15.0,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "slavelabour",
@@ -267,7 +247,7 @@
     "amount": null,
     "keyword_score": 3,
     "priority": 15,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "slavelabour",
@@ -277,7 +257,7 @@
     "amount": 5.0,
     "keyword_score": 2,
     "priority": 15.0,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "signupsforpay",
@@ -287,7 +267,7 @@
     "amount": null,
     "keyword_score": 3,
     "priority": 15,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "signupsforpay",
@@ -297,7 +277,7 @@
     "amount": null,
     "keyword_score": 3,
     "priority": 15,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "signupsforpay",
@@ -307,7 +287,7 @@
     "amount": null,
     "keyword_score": 3,
     "priority": 15,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "beermoney",
@@ -317,7 +297,7 @@
     "amount": null,
     "keyword_score": 2,
     "priority": 10,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "beermoney",
@@ -327,7 +307,7 @@
     "amount": null,
     "keyword_score": 2,
     "priority": 10,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "beermoney",
@@ -337,7 +317,7 @@
     "amount": null,
     "keyword_score": 2,
     "priority": 10,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "slavelabour",
@@ -347,7 +327,7 @@
     "amount": null,
     "keyword_score": 2,
     "priority": 10,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "slavelabour",
@@ -357,7 +337,7 @@
     "amount": null,
     "keyword_score": 2,
     "priority": 10,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "slavelabour",
@@ -367,7 +347,7 @@
     "amount": null,
     "keyword_score": 2,
     "priority": 10,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "signupsforpay",
@@ -377,7 +357,7 @@
     "amount": null,
     "keyword_score": 2,
     "priority": 10,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "passive_income",
@@ -387,7 +367,7 @@
     "amount": null,
     "keyword_score": 2,
     "priority": 10,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "workonline",
@@ -397,7 +377,7 @@
     "amount": null,
     "keyword_score": 2,
     "priority": 10,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "beermoney",
@@ -407,7 +387,7 @@
     "amount": null,
     "keyword_score": 1,
     "priority": 5,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "beermoney",
@@ -417,7 +397,7 @@
     "amount": null,
     "keyword_score": 1,
     "priority": 5,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "beermoney",
@@ -427,7 +407,7 @@
     "amount": null,
     "keyword_score": 1,
     "priority": 5,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "beermoney",
@@ -437,7 +417,7 @@
     "amount": null,
     "keyword_score": 1,
     "priority": 5,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "slavelabour",
@@ -447,7 +427,7 @@
     "amount": null,
     "keyword_score": 1,
     "priority": 5,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "passive_income",
@@ -457,7 +437,7 @@
     "amount": null,
     "keyword_score": 1,
     "priority": 5,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "passive_income",
@@ -467,7 +447,7 @@
     "amount": null,
     "keyword_score": 1,
     "priority": 5,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "passive_income",
@@ -477,7 +457,7 @@
     "amount": null,
     "keyword_score": 1,
     "priority": 5,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
     "source": "passive_income",
@@ -487,16 +467,36 @@
     "amount": null,
     "keyword_score": 1,
     "priority": 5,
-    "time": "03:44"
+    "time": "03:50"
   },
   {
-    "source": "flipping",
+    "source": "workonline",
     "type": "reddit_post",
-    "title": "Phone buyers",
-    "link": "https://redd.it/1tn1gok",
+    "title": "How do we feel about shiftsmart in 2026?",
+    "link": "https://redd.it/1tll4vm",
     "amount": null,
     "keyword_score": 1,
     "priority": 5,
-    "time": "03:44"
+    "time": "03:50"
+  },
+  {
+    "source": "workonline",
+    "type": "reddit_post",
+    "title": "Be wary about WithinReachHospice",
+    "link": "https://redd.it/1th0mph",
+    "amount": null,
+    "keyword_score": 1,
+    "priority": 5,
+    "time": "03:50"
+  },
+  {
+    "source": "workonline",
+    "type": "reddit_post",
+    "title": "Science/medical transcription or editing?",
+    "link": "https://redd.it/1tgz1uf",
+    "amount": null,
+    "keyword_score": 1,
+    "priority": 5,
+    "time": "03:50"
   }
 ]
