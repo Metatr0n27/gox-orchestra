@@ -1,1 +1,15 @@
-{"strategy":"single_endpoint","prefer_strike":true,"auto_convert_threshold":100}
+{
+  "primary_wallet_type": "btc_segwit",
+  "address_display_name": "Consolidation Endpoint",
+  "notes": "All swarm earnings funnel here",
+  "recommended_exchanges_for_conversion": [
+    "Kraken (lowest fees)",
+    "Strike (BTC to bank)",
+    "CashApp (instant USD)"
+  ],
+  "chain_hop_options": {
+    "btc_to_lightning": "Muun Wallet, Strike",
+    "lightning_to_usd": "Strike, River Financial",
+    "mixing_services": "Samurai Whirlpool, Wasabi"
+  }
+}

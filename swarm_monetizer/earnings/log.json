@@ -1,1 +1,21 @@
-{"events":[],"total":0.0,"started":"2026-05-24T06:43:43-07:00"}
+{
+  "events": [
+    {
+      "amount": 15.0,
+      "source": "Coinbase_Earn",
+      "time": "11:30:49"
+    },
+    {
+      "amount": 8.5,
+      "source": "Survey_complete",
+      "time": "11:30:50"
+    },
+    {
+      "amount": 50.0,
+      "source": "Item_sold_marketplace",
+      "time": "11:30:51"
+    }
+  ],
+  "total": 73.5,
+  "started": "2026-05-24T06:43:43-07:00"
+}
