@@ -573,3 +573,5 @@
 {"last_run": "2026-05-25 20:00", "total_opportunities": 56, "top_priority": "[OFFER] Capital One Shopping ~ $100 Total: $80 from them + $"}
 {"last_run": "2026-05-25 20:10", "total_opportunities": 56, "top_priority": "[OFFER] Capital One Shopping ~ $100 Total: $80 from them + $"}
 {"last_run": "2026-05-25 20:10", "total_opportunities": 56, "top_priority": "[OFFER] Capital One Shopping ~ $100 Total: $80 from them + $"}
+{"last_run": "2026-05-25 20:20", "total_opportunities": 56, "top_priority": "[OFFER] Capital One Shopping ~ $100 Total: $80 from them + $"}
+{"last_run": "2026-05-25 20:20", "total_opportunities": 56, "top_priority": "[OFFER] Capital One Shopping ~ $100 Total: $80 from them + $"}
