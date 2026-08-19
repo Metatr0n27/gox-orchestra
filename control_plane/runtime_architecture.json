@@ -1,0 +1,39 @@
+{
+  "primary_runtime": "Hermes Agent",
+  "secondary_runtime": "OpenClaw",
+  "controller": "GOX Control Plane",
+  "execution_model": {
+    "Hermes Agent": "Primary always-on reasoning and task-execution runtime. Learns repeatable workflows and executes approved tools/tasks.",
+    "OpenClaw": "Optional communications and multi-channel interaction layer for WhatsApp, Telegram, Slack, Discord, and browser-facing workflows when useful.",
+    "GOX Control Plane": "Owns task priority, revenue scoring, agent routing, QA, blocker handling, audit, and human-gate escalation.",
+    "GOX Worker": "Executes deterministic VPS-side jobs and records heartbeat, done, failure, and audit evidence."
+  },
+  "roles": [
+    "Opportunity Scout",
+    "Verifier",
+    "Operator",
+    "QA",
+    "Blocker Resolver",
+    "Human Gate Router",
+    "Revenue Controller",
+    "Auditor",
+    "Learning Agent"
+  ],
+  "deployment_policy": {
+    "preserve_existing_vps": true,
+    "do_not_reinstall_os_unless_required": true,
+    "prefer_hostinger_docker_catalog": true,
+    "hermes_first": true,
+    "openclaw_optional": true,
+    "require_verification_before_marking_live": true
+  },
+  "human_only_gates": [
+    "CAPTCHA",
+    "identity or KYC verification",
+    "personal attestation",
+    "login approval or 2FA that requires the account owner",
+    "payment or withdrawal confirmation requiring the owner",
+    "platform tasks that explicitly require the registered human to perform them"
+  ],
+  "operating_rule": "Automate everything legitimately executable. Route unavoidable human gates as one-step handoffs and continue all unblocked lanes in parallel."
+}
