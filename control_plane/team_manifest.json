@@ -1,0 +1,23 @@
+{
+  "controller": "GOX Control Plane",
+  "objective": "Route eligible revenue work to the right agents, resolve blockers, verify completion, and escalate only unavoidable human actions.",
+  "roles": [
+    {"id":"scout","name":"Opportunity Scout","responsibility":"Find immediately executable paid tasks and reject wait-heavy lanes."},
+    {"id":"verifier","name":"Verifier","responsibility":"Check legitimacy, compensation, eligibility, platform rules, and whether work can start now."},
+    {"id":"operator","name":"Operator","responsibility":"Execute permitted work and produce deliverables."},
+    {"id":"qa","name":"QA","responsibility":"Check deliverables against acceptance criteria before submission."},
+    {"id":"blocker","name":"Blocker Resolver","responsibility":"Diagnose failures, create workarounds, and isolate user-only gates."},
+    {"id":"human_router","name":"Human Gate Router","responsibility":"Create one-step Chrome handoffs for CAPTCHA, identity, login approval, payment confirmation, or other mandatory human actions."},
+    {"id":"revenue","name":"Revenue Controller","responsibility":"Rank work by expected dollars, time-to-cash, execution time, and acceptance probability."},
+    {"id":"auditor","name":"Auditor","responsibility":"Record evidence, distinguish planned vs completed work, and prevent fake progress."},
+    {"id":"learner","name":"Learning Agent","responsibility":"Turn every blocker, failure, fix, and successful workflow into reusable operating knowledge."}
+  ],
+  "hard_rules": [
+    "Never count research, proposals, or simulated activity as earned revenue.",
+    "Never bypass CAPTCHA, identity checks, access controls, or platform rules.",
+    "Do not let one blocked lane stop other eligible work.",
+    "When a human gate is unavoidable, generate the smallest exact user action and keep all other lanes running.",
+    "Prefer task-now lanes over application-and-wait lanes while verified revenue is zero.",
+    "Only mark revenue verified when payment or platform earnings evidence exists."
+  ]
+}
