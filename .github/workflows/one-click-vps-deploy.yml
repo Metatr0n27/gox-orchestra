@@ -1,0 +1,85 @@
+name: GOX One-Click VPS Deploy
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate required secrets
+        env:
+          GOX_VPS_HOST: ${{ secrets.GOX_VPS_HOST }}
+          GOX_VPS_USER: ${{ secrets.GOX_VPS_USER }}
+          GOX_VPS_SSH_KEY: ${{ secrets.GOX_VPS_SSH_KEY }}
+        run: |
+          set -euo pipefail
+          test -n "$GOX_VPS_HOST" || { echo "Missing secret GOX_VPS_HOST"; exit 20; }
+          test -n "$GOX_VPS_USER" || { echo "Missing secret GOX_VPS_USER"; exit 21; }
+          test -n "$GOX_VPS_SSH_KEY" || { echo "Missing secret GOX_VPS_SSH_KEY"; exit 22; }
+
+      - name: Configure SSH
+        env:
+          GOX_VPS_HOST: ${{ secrets.GOX_VPS_HOST }}
+          GOX_VPS_SSH_KEY: ${{ secrets.GOX_VPS_SSH_KEY }}
+          GOX_VPS_PORT: ${{ secrets.GOX_VPS_PORT }}
+        run: |
+          set -euo pipefail
+          PORT="${GOX_VPS_PORT:-22}"
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          printf '%s\n' "$GOX_VPS_SSH_KEY" > ~/.ssh/gox_vps
+          chmod 600 ~/.ssh/gox_vps
+          ssh-keyscan -p "$PORT" -H "$GOX_VPS_HOST" >> ~/.ssh/known_hosts
+
+      - name: Deploy and verify GOX stack
+        env:
+          GOX_VPS_HOST: ${{ secrets.GOX_VPS_HOST }}
+          GOX_VPS_USER: ${{ secrets.GOX_VPS_USER }}
+          GOX_VPS_PORT: ${{ secrets.GOX_VPS_PORT }}
+        run: |
+          set -euo pipefail
+          PORT="${GOX_VPS_PORT:-22}"
+          ssh -i ~/.ssh/gox_vps -p "$PORT" "$GOX_VPS_USER@$GOX_VPS_HOST" 'bash -s' <<'REMOTE'
+          set -euo pipefail
+          if [ "$(id -u)" -ne 0 ]; then
+            if command -v sudo >/dev/null 2>&1; then
+              SUDO=sudo
+            else
+              echo "Remote user is not root and sudo is unavailable"
+              exit 30
+            fi
+          else
+            SUDO=
+          fi
+          $SUDO sh -c 'curl -fsSL https://raw.githubusercontent.com/Metatr0n27/gox-orchestra/main/vps/bootstrap.sh -o /tmp/gox-bootstrap.sh && bash /tmp/gox-bootstrap.sh'
+          $SUDO bash /opt/gox-orchestra/vps/preflight.sh
+          $SUDO systemctl --no-pager --full status gox-worker gox-control
+          $SUDO cat /var/lib/gox/heartbeat.json
+          REMOTE
+
+      - name: Open blocker issue if deployment fails
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create \
+            --repo "$GITHUB_REPOSITORY" \
+            --title "VPS one-click deployment blocked" \
+            --body "The GOX one-click VPS deployment workflow failed. Open the latest Actions run for the exact failed step. This issue is generated automatically so the blocker is not lost. Do not mark resolved until gox-worker and gox-control are verified active and preflight passes."
+
+      - name: Success summary
+        if: success()
+        run: |
+          {
+            echo '## GOX VPS is live'
+            echo '- gox-worker verified active'
+            echo '- gox-control verified active'
+            echo '- healthcheck completed'
+            echo '- routing test completed'
+            echo '- VPS preflight passed'
+          } >> "$GITHUB_STEP_SUMMARY"
